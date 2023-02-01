@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -20,8 +21,9 @@ const Navbar = () => {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="flex text-white">
               <li className="mr-4  text-slate-400">
-                <a href="/login" />
-                <button> Giriş Yap</button>
+                <Link href="login">
+                  <button> Giriş Yap</button>
+                </Link>
               </li>
               <li className="mr-12 text-slate-400 border-orange-700">
                 <a href="/signup" />
