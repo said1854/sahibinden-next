@@ -17,7 +17,7 @@ const Navbar = ({ title }) => {
             <input
               className="bg-gray-800 text-gray-300"
               type="text"
-              value="Kelime ile ara"
+              defaultValue="Kelime ile ara"
             />
           </div>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">

@@ -2,12 +2,10 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import Layout from "../layout/layout";
 
-function emlak() {
+function emlak({ children }) {
   return (
     <>
-      <Layout title={"Emlak"}>
-        <Sidebar />
-      </Layout>
+      <Layout title={"Emlak"}>{children}</Layout>
     </>
   );
 }

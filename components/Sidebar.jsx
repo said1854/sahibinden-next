@@ -28,7 +28,7 @@ const Sidebar = () => {
                 href="tuning"
                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                <span class="flex-1 ml-3  whitespace-nowrap">
+                <span className="flex-1 ml-3  whitespace-nowrap">
                   Yedek Parça Aksesuar <br /> Donanım Tuning
                 </span>
               </a>
@@ -36,15 +36,15 @@ const Sidebar = () => {
             <li>
               <a
                 href="#"
-                class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               ></a>
             </li>
             <li>
               <a
                 href="#"
-                class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                <span class="flex-1 ml-3 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   İkinci El ve Sıfır Alışveriş{" "}
                 </span>
               </a>
@@ -52,9 +52,9 @@ const Sidebar = () => {
             <li>
               <a
                 href="#"
-                class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                <span class="flex-1 ml-3 whitespace-nowrap">Özel Ders</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Özel Ders</span>
               </a>
             </li>
           </ul>
