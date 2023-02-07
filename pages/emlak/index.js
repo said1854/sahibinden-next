@@ -1,11 +1,11 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
-import Layout from "../layout/layout";
+import Sidebar from "../../components/Sidebar";
+import Layout from "../../layout/layout";
 import { useState, useEffect } from "react";
-import HorizontalCard from "../components/HorizontalCard";
-import products from "../json/emlak.json" assert { type: "json" };
+import HorizontalCard from "../../components/HorizontalCard";
+import products from "../../json/emlak.json" assert { type: "json" };
 
-function emlak({ children }) {
+function emlak() {
   const [data, setData] = useState([]);
   useEffect(() => {
     setData(products);
