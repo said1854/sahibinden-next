@@ -1,4 +1,3 @@
-import Image from "next/Image";
 import React from "react";
 
 const HorizontalCard = ({ title, imageUrl, price, rating, odaSayisi }) => {

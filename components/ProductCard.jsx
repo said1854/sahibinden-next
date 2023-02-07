@@ -1,5 +1,3 @@
-import Image from "next/Image";
-
 const ProductCard = ({ id, title, imageUrl, price, rating }) => {
   return (
     <div>
