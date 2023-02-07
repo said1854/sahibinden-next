@@ -10,7 +10,7 @@ const ProductCard = ({ id, title, imageUrl, price, rating }) => {
               {title}
             </h5>
           </a>
-          <Image src={imageUrl} alt="--" width={50} height={50} />
+          <img src={imageUrl} alt="--" />
           <p>Rating: {rating}</p>
           <div className="flex items-center justify-between">
             <span className="text-3xl font-bold text-gray-900 dark:text-white">
