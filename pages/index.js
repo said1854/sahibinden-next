@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <Layout>
-      <ul className="flex w-3/4 flex-wrap">
+      <ul className="flex w-full flex-wrap">
         {data.map((item, index) => (
           <li className="mx-3 my-2">
             <ProductCard

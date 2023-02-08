@@ -1,9 +1,14 @@
 import { useRouter } from "next/router";
-const Post = () => {
-  const router = useRouter();
-  const { title } = router.query;
+import Layout from "../../layout/layout";
 
-  return <p>Post: {title}</p>;
+const Ev = () => {
+  // const router = useRouter();
+  // const { title } = router.query;
+  return (
+    <Layout>
+      <p>Ev1</p>
+    </Layout>
+  );
 };
 
-export default Post;
+export default Ev;

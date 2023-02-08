@@ -1,7 +1,7 @@
 import Sidebar from "../../components/Sidebar";
 import Layout from "../../layout/layout";
 import HorizontalCard from "../../components/HorizontalCard";
-import products from "../../json/chrysler.json" assert { type: "json" };
+import products from "../../json/bentley.json" assert { type: "json" };
 import { useState, useEffect } from "react";
 
 export default () => {
@@ -14,12 +14,12 @@ export default () => {
 
   return (
     <Layout title={"vasita"}>
-      <ul className="flex w-3/4 flex-wrap">
+      <ul className="flex w-full flex-wrap">
         {data.map((item, index) => (
           <li className="w-full mx-3 my-2">
             <HorizontalCard
               key={index}
-              id={item.km}
+              id={item.id}
               title={item.title}
               imageUrl={item.url}
               price={item.price}
