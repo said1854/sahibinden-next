@@ -14,6 +14,7 @@ function emlak() {
 
   console.log(data);
   const router = useRouter();
+  const id = router.query;
 
   return (
     <>
@@ -23,14 +24,14 @@ function emlak() {
             <li className="mx-3 my-2 w-full">
               <HorizontalCard
                 key={index}
-                id={item.km}
+                id={item.id}
                 title={item.title}
                 imageUrl={item.imageUrl}
                 price={item.price}
                 rating={item.m2}
                 odaSayisi={item.odaSayisi}
                 onClick={() => {
-                  router.push(`emlak/${item.title}`);
+                  router.push(`emlak/${item.id}`);
                 }}
                 style={{ cursor: "pointer" }}
               />

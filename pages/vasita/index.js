@@ -3,6 +3,7 @@ import Layout from "../../layout/layout";
 import HorizontalCard from "../../components/HorizontalCard";
 import products from "../../json/bentley.json" assert { type: "json" };
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default () => {
   const [data, setData] = useState([]);
@@ -10,7 +11,7 @@ export default () => {
     setData(products);
   }, []);
 
-  console.log(data);
+  const router = useRouter();
 
   return (
     <Layout title={"vasita"}>
@@ -24,6 +25,9 @@ export default () => {
               imageUrl={item.url}
               price={item.price}
               rating={item.year}
+              onClick={() => {
+                router.push(`vasita/${item.id}`);
+              }}
             />
           </li>
         ))}

@@ -1,6 +1,14 @@
 import React from "react";
 
-const HorizontalCard = ({ title, imageUrl, price, rating, odaSayisi, id }) => {
+const HorizontalCard = ({
+  title,
+  imageUrl,
+  price,
+  rating,
+  odaSayisi,
+  id,
+  onClick,
+}) => {
   return (
     <div className="w-full flex">
       <img src={imageUrl} alt={title} width={100} height={20} />
@@ -20,8 +28,11 @@ const HorizontalCard = ({ title, imageUrl, price, rating, odaSayisi, id }) => {
             <p className="text-black leading-none">{odaSayisi}</p>
           </div>
           <div className="text-sm mx-2">
-            <p className="text-black leading-none">{id}</p>
+            <p className="text-black leading-none">id: {id}</p>
           </div>
+          <button className="border px-4 py-1 bg-slate-400" onClick={onClick}>
+            Details
+          </button>
         </div>
       </div>
     </div>
