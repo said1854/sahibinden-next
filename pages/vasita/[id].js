@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Layout from "../../layout/layout";
-import product from "../../json/emlak.json";
+import product from "../../json/bentley.json";
 import HorizontalCard from "../../components/HorizontalCard";
 
 const Araba = ({ children }) => {
@@ -10,13 +10,12 @@ const Araba = ({ children }) => {
   // const [emlak, setEmlak] = useState();
   const [data, setData] = useState([]);
   useEffect(() => {
-    setData(
-      product.find((p) => {
-        p.id === id;
-      })
-    );
+    product.find((p) => {
+      if (p.id === id) {
+        setData(p);
+      }
+    });
   }, []);
-  console.log(data);
 
   return (
     <Layout>
@@ -24,11 +23,11 @@ const Araba = ({ children }) => {
         <li className="w-full mx-3 my-2">
           <HorizontalCard
             key={1}
-            // id={data.id}
-            // title={data.title}
-            // imageUrl={data.url}
-            // price={data.price}
-            // rating={data.year}
+            id={id}
+            title={data.title}
+            imageUrl={data.url}
+            price={data.price}
+            rating={data.year}
           />
         </li>
       </ul>

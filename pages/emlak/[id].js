@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Layout from "../../layout/layout";
 import product from "../../json/emlak.json";
 import HorizontalCard from "../../components/HorizontalCard";
+import Navbar from "../../components/Navbar";
 
 const Ev = ({ children }) => {
   const router = useRouter();
@@ -10,13 +11,12 @@ const Ev = ({ children }) => {
   // const [emlak, setEmlak] = useState();
   const [data, setData] = useState([]);
   useEffect(() => {
-    setData(
-      product.find((p) => {
-        p.id === id;
-      })
-    );
+    product.find((p) => {
+      if (p.id === id) {
+        setData(p);
+      }
+    });
   }, []);
-  console.log(data);
 
   return (
     <Layout>
@@ -25,10 +25,11 @@ const Ev = ({ children }) => {
           <HorizontalCard
             key={1}
             id={id}
-            // title={data.title}
-            // imageUrl={data.url}
-            // price={data.price}
-            // rating={data.year}
+            title={data.title}
+            imageUrl={data.imageUrl}
+            price={data.price}
+            rating={data.m2}
+            odaSayisi={data.odaSayisi}
           />
         </li>
       </ul>
