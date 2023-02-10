@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Layout from "../../layout/layout";
 import product from "../../json/emlak.json";
-import HorizontalCard from "../../components/HorizontalCard";
+import DetailCard from "../../components/DetailCard";
 import Navbar from "../../components/Navbar";
 
 const Ev = ({ children }) => {
@@ -22,7 +22,7 @@ const Ev = ({ children }) => {
     <Layout>
       <ul className="flex w-full flex-wrap">
         <li className="w-full mx-3 my-2">
-          <HorizontalCard
+          <DetailCard
             key={1}
             id={id}
             title={data.title}
