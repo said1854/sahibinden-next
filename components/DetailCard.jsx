@@ -50,6 +50,9 @@ const DetailsCard = ({
               <dt className="font-medium text-gray-900">id</dt>
               <dd className="mt-2 text-sm text-gray-500">{id}</dd>
             </div>
+            <button className="bg-blue-600 rounded w-32">
+              Haritada göster
+            </button>
           </dl>
         </div>
       </div>
