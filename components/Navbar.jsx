@@ -1,7 +1,10 @@
 import Link from "next/link";
-import React from "react";
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const Navbar = ({ title }) => {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
     <div>
       <nav className="bg-gray-700 border-gray-200 px-2 py-4 sm:px-4 dark:bg-gray-900">
