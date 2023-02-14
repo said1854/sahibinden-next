@@ -12,7 +12,6 @@ function emlak() {
     setData(products);
   }, []);
 
-  console.log(data);
   const router = useRouter();
   const id = router.query;
 

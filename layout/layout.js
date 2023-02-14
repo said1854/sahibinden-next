@@ -10,12 +10,10 @@ export default function Layout({ children, title }) {
 
   return (
     <ThemeContext.Provider value={data}>
-      <div>
-        <Navbar title={title} />
-        <div className="flex">
-          <Sidebar />
-          <main>{children}</main>
-        </div>
+      <Navbar title={title} />
+      <div className="flex">
+        <Sidebar />
+        <main>{children}</main>
       </div>
     </ThemeContext.Provider>
   );

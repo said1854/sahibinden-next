@@ -25,6 +25,18 @@ const Navbar = ({ title }) => {
           </div>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="flex text-white">
+              <li className="mr-4 bg-slate-900 rounded px-4 text-slate-400">
+                <button
+                  onClick={() => {
+                    setTheme(theme === "light" ? "dark" : "light");
+                  }}
+                >
+                  Change Theme
+                </button>
+              </li>
+              <li className="mr-4  text-slate-400">
+                <p>{theme}</p>
+              </li>
               <li className="mr-4  text-slate-400">
                 <Link href="login">
                   <button> Giriş Yap</button>
