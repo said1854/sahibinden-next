@@ -1,4 +1,6 @@
 import React from "react";
+import MapComponent from "./MapComponent";
+import location from "../json/locations";
 
 const DetailsCard = ({
   title,
@@ -9,13 +11,15 @@ const DetailsCard = ({
   id,
   onClick,
 }) => {
+  const randomNumber = Math.floor(Math.random() * 100);
+  console.log(randomNumber);
   return (
     <div className="bg-white">
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
         <div>
           <img
             src={imageUrl}
-            alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
+            alt="--"
             className="rounded-lg bg-gray-100 w-full"
           />
         </div>
@@ -50,12 +54,13 @@ const DetailsCard = ({
               <dt className="font-medium text-gray-900">id</dt>
               <dd className="mt-2 text-sm text-gray-500">{id}</dd>
             </div>
-            <button className="bg-blue-600 rounded w-32">
-              Haritada göster
-            </button>
           </dl>
         </div>
       </div>
+      <MapComponent
+        lat={location[randomNumber].lat}
+        lng={location[randomNumber].lng}
+      />
     </div>
   );
 };

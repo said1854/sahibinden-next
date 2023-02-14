@@ -17,7 +17,11 @@ function Home() {
       <ul className="flex w-full flex-wrap">
         {data.map((item, index) => (
           <li className="mx-3 my-2">
-            <ProductCard title={item.title} imageUrl={item.imageUrl} />
+            <ProductCard
+              key={index}
+              title={item.title}
+              imageUrl={item.imageUrl}
+            />
           </li>
         ))}
       </ul>
