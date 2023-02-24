@@ -11,7 +11,13 @@ const HorizontalCard = ({
 }) => {
   return (
     <div className="w-full flex">
-      <img src={imageUrl} alt={title} width={100} height={20} />
+      <img
+        src={imageUrl}
+        alt={title}
+        width={100}
+        height={20}
+        className="my-4 mx-4"
+      />
 
       <div className="w-full border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div className="mb-8">
@@ -30,7 +36,10 @@ const HorizontalCard = ({
           <div className="text-sm mx-2">
             <p className="text-black leading-none">id: {id}</p>
           </div>
-          <button className="border px-4 py-1 bg-slate-400" onClick={onClick}>
+          <button
+            className="border rounded px-4 py-1 bg-slate-400"
+            onClick={onClick}
+          >
             Details
           </button>
         </div>

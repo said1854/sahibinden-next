@@ -17,7 +17,7 @@ export default () => {
     <Layout title={"vasita"}>
       <ul className="flex w-full flex-wrap">
         {data.map((item, index) => (
-          <li className="w-full mx-3 my-2">
+          <li className="w-full px-4 mx-3 my-2">
             <HorizontalCard
               key={index}
               id={item.id}

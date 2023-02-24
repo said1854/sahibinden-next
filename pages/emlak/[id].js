@@ -4,6 +4,7 @@ import Layout from "../../layout/layout";
 import product from "../../json/emlak.json";
 import DetailCard from "../../components/DetailCard";
 import Navbar from "../../components/Navbar";
+import Link from "next/link";
 
 const Ev = ({ children }) => {
   const router = useRouter();
@@ -21,17 +22,19 @@ const Ev = ({ children }) => {
   return (
     <Layout>
       <ul className="flex w-full flex-wrap">
-        <li className="w-full mx-3 my-2">
-          <DetailCard
-            key={1}
-            id={id}
-            title={data.title}
-            imageUrl={data.imageUrl}
-            price={data.price}
-            rating={data.m2}
-            odaSayisi={data.odaSayisi}
-          />
-        </li>
+        <Link href={id}>
+          <li className="w-full mx-3 my-2">
+            <DetailCard
+              key={1}
+              id={id}
+              title={data.title}
+              imageUrl={data.imageUrl}
+              price={data.price}
+              rating={data.m2}
+              odaSayisi={data.odaSayisi}
+            />
+          </li>
+        </Link>
       </ul>
     </Layout>
   );

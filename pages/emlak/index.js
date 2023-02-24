@@ -32,8 +32,7 @@ function emlak() {
                 onClick={() => {
                   router.push(`emlak/${item.id}`);
                 }}
-                style={{ cursor: "pointer" }}
-              />
+                style={{ cursor: "pointer" }} />
             </li>
           ))}
         </ul>
