@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Layout from "../../layout/layout";
 import product from "../../json/emlak.json";
 import DetailCard from "../../components/DetailCard";
-import Navbar from "../../components/Navbar";
 import Link from "next/link";
 
 const Ev = ({ children }) => {

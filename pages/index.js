@@ -10,10 +10,9 @@ function Home() {
   useEffect(() => {
     setData(products);
   }, []);
-  console.log(data);
 
   return (
-    <Layout title={"vitrin"}>
+    <Layout title={"vitrin"} className="bg-blue-500">
       <ul className="flex w-full flex-wrap">
         {data.map((item, index) => (
           <li className="mx-3 my-2">

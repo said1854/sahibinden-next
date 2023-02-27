@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import HorizontalCard from "../../components/HorizontalCard";
 import products from "../../json/emlak.json" assert { type: "json" };
 import { useRouter } from "next/router";
+import Filter from "../../components/Filter";
 
 function emlak() {
   const [data, setData] = useState([]);
@@ -18,6 +19,7 @@ function emlak() {
   return (
     <>
       <Layout title={"vasita"}>
+        <Filter />
         <ul className="flex w-full flex-wrap">
           {data.map((item, index) => (
             <li className="mx-3 my-2 w-full">
@@ -32,7 +34,8 @@ function emlak() {
                 onClick={() => {
                   router.push(`emlak/${item.id}`);
                 }}
-                style={{ cursor: "pointer" }} />
+                style={{ cursor: "pointer" }}
+              />
             </li>
           ))}
         </ul>

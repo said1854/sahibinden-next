@@ -5,7 +5,6 @@ import ThemeContext from "../context/ThemeContext";
 
 export default function Layout({ children, title }) {
   const [theme, setTheme] = useState("light");
-
   const data = { theme, setTheme };
 
   return (
