@@ -20,25 +20,36 @@ function emlak() {
     <>
       <Layout title={"vasita"}>
         <Filter />
-        <ul className="flex w-full flex-wrap">
-          {data.map((item, index) => (
-            <li className="mx-3 my-2 w-full">
-              <HorizontalCard
-                key={index}
-                id={item.id}
-                title={item.title}
-                imageUrl={item.imageUrl}
-                price={item.price}
-                rating={item.m2}
-                odaSayisi={item.odaSayisi}
-                onClick={() => {
-                  router.push(`emlak/${item.id}`);
-                }}
-                style={{ cursor: "pointer" }}
-              />
-            </li>
-          ))}
-        </ul>
+        <table className="flex w-10/12 flex-wrap border">
+          <thead>
+            <tr>
+              <td>ilan aciklama</td>
+              <td>m2</td>
+              <td>fiyat</td>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item, index) => (
+              <tr className="mx-3 my-2 w-full">
+                <HorizontalCard
+                  key={index}
+                  id={item.id}
+                  title={item.title}
+                  imageUrl={item.imageUrl}
+                  price={item.price}
+                  rating={item.m2}
+                  odaSayisi={item.odaSayisi}
+                  onClick={() => {
+                    router.push(`emlak/${item.id}`);
+                  }}
+                  style={{ cursor: "pointer" }}
+                />
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        {/* <ul ></ul> */}
       </Layout>
     </>
   );

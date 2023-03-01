@@ -7,6 +7,9 @@
     height: 50vh;
 }
 
-/* body {
-    background-color: aqua;
-} */
+@layer base{
+    body{
+        @apply bg-slate-200;
+        @apply dark:bg-slate-800 dark:text-slate-300
+    }
+}
