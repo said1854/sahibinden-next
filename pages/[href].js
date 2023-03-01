@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Layout from "../../layout/layout";
 import product from "../../json/emlak.json";
-import DetailCard from "../../components/DetailCard";
+import DetailCard from "../components/DetailCard";
 import Link from "next/link";
 
 const Ev = ({ children }) => {
